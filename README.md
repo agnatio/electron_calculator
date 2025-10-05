@@ -1,6 +1,7 @@
 # Calculator
 
 A simple, elegant calculator application built with Electron.
+Tutorial excersise for Electron practice, especially for deployment and releasing .exe
 
 ![Calculator](https://img.shields.io/badge/Electron-App-blue)
 ![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-yellow)

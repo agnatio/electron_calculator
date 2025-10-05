@@ -13,12 +13,22 @@ function createWindow() {
     height: 520,
     autoHideMenuBar: true,
     resizable: false,
+    alwaysOnTop: true,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
     },
   });
 
   mainWindow.loadFile("index.html");
+
+  // Change opacity based on focus
+  mainWindow.on('focus', () => {
+    mainWindow.setOpacity(1.0);    // Fully opaque when active
+  });
+
+  mainWindow.on('blur', () => {
+    mainWindow.setOpacity(0.7);    // Transparent when inactive
+  });
 }
 
 app.on("ready", createWindow);

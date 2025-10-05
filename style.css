@@ -1,0 +1,113 @@
+:root {
+    --bg-body: #f0f0f0;
+    --bg-calculator: #222;
+    --bg-display: #1a1a1a;
+    --bg-button: #333;
+    --bg-operator: #ff9500;
+    --bg-equals: #4caf50;
+    --text-display: #fff;
+    --text-button: #fff;
+
+    /* Sizing */
+    --border-radius: 8px;
+    --button-size: 70px;
+    --gap: 10px;
+
+    /* Font family */
+    --font-family: 'Segoe UI', Tahoma, sans-serif;
+
+    --padding-calculator: 20px;
+    --padding-display: 20px;
+    --font-size-display: 48px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg-body);
+    font-family: var(--font-family);
+}
+
+.calculator {
+    background: var(--bg-calculator);
+    padding: var(--padding-calculator);
+    border-radius: var(--border-radius);
+  }
+
+/* Display */
+.display {
+  background: var(--bg-display);
+  color: var(--text-display);
+  font-size: var(--font-size-display);
+  text-align: right;
+  padding: var(--padding-display);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--gap);
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Buttons Container */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+/* Button Rows */
+.button-row {
+  display: flex;
+  gap: var(--gap);
+}
+
+/* All Buttons */
+button {
+  width: var(--button-size);
+  height: var(--button-size);
+  font-size: 24px;
+  font-family: var(--font-family);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  color: var(--text-button);
+  background: var(--bg-button);
+  transition: all 0.15s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Number Buttons */
+.number {
+  background: var(--bg-button);
+}
+
+/* Operator Buttons */
+.operator {
+  background: var(--bg-operator);
+}
+
+/* Clear Button */
+.clear {
+  background: #d32f2f;
+}
+
+/* Equals Button */
+.equals {
+  background: var(--bg-equals);
+}
